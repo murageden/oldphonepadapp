@@ -8,14 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+
+    <ProjectReference Include="..\OldPhonePadApp\OldPhonePadApp.csproj" />
+  
+    <PackageReference Include="MSTest" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.10.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
-    <PackageReference Include="xunit" Version="2.9.2" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.2.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit" />
+    <ProjectCapability Include="Test" />
+    <ProjectCapability Include="CodeCoverage" />
+    <ProjectCapability Include="TestAdapter" />
+    <ProjectCapability Include="TestFramework" /> 
+    <ProjectCapability Include="MSTest" />
+    <ProjectCapability Include="MSTest.TestAdapter" />
+    <ProjectCapability Include="MSTest.TestFramework" />
+    <ProjectCapability Include="Microsoft.Testing.Extensions.CodeCoverage" />
   </ItemGroup>
 
 </Project>
