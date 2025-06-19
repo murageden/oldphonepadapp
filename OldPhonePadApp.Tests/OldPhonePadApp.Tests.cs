@@ -8,7 +8,7 @@ namespace OldPhonePadApp.Tests
     public class OldPhonePadTests
     {
         [TestMethod]
-        public void ConvertToOldPhonePad_EmptyString_ReturnsEmptyString()
+        public void OldPhonePad_EmptyString_ReturnsEmptyString()
         {
             string input = string.Empty;
             string expected = string.Empty;
@@ -19,7 +19,7 @@ namespace OldPhonePadApp.Tests
         }
 
         [TestMethod]
-        public void ConvertToOldPhonePad_SimpleInput_ReturnsConvertedString()
+        public void OldPhonePad_SimpleInput_ReturnsConvertedString()
         {
             string input = "4433555 555666#";
             string expected = "HELLO";
