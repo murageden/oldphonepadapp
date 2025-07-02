@@ -1,0 +1,13 @@
+language: csharp
+mono: none
+dotnet: 2.1
+solution: OldPhonePadApp/OldPhonePadApp.sln
+script:
+  - cd OldPhonePadApp.Tests
+  - dotnet build
+  - dotnet test --collect "Code Coverage" --results-directory TestResults/
+after_success:
+  - dotnet new tool-manifest
+  - dotnet tool install coveralls.net
+  - dotnet tool restore
+  - dotnet csmacnz.Coveralls --opencover TestResults/ --repo-token l0QoIwlFzjpyKwrsxPEusp4N9XHt76Xa9

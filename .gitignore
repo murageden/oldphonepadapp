@@ -1,0 +1,6 @@
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.binlog
+*.config
