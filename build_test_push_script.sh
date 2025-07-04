@@ -2,14 +2,14 @@
 
 TEST_COMMAND="dotnet test" 
 
-echo "\n Automatically Running Tests and Pushing Changes to GitHub... \n"
+echo $"\n Automatically Running Tests and Pushing Changes to GitHub... \n"
 
 # Check for compile time errors
 cd OldPhonePadApp/
 dotnet build
 
 if [ $? -ne 0 ]; then
-    echo "\n Build failed. Could be errors in the code Exiting script. \n"
+    echo $"\n Build failed. Could be errors in the code Exiting script. \n"
     exit 1 # Failure
 fi
 
@@ -24,15 +24,15 @@ $TEST_COMMAND
 
 # Check if the test command was successful
 if [ $? -eq 0 ]; then
-    echo "\n All tests passed! Pushing to GitHub... \n"
+    echo $"\n All tests passed! Pushing to GitHub... \n"
     # Add changes to git
     cd ../
     git add .
-    git commit -m "app (Fix Automated Testing): Auto Run Tests and Push Changes"
+    git commit -m "app (Fix new line Automated Testing): Auto Run Tests and Push Changes"
     git push origin main
-    echo "\n Changes pushed successfully. \n"
+    echo $"\n Changes pushed successfully. \n"
     exit 0 # Success
 else
-    echo "\n Some Tests Failed. Push to Github will not be successful. \n"
+    echo $"\n Some Tests Failed. Push to Github will not be successful. \n"
     exit 1 # Failure
 fi
