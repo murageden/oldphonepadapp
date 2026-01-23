@@ -61,11 +61,6 @@ public class OldPhonePadApp
                 }
                 i++;
             }
-            // else if (currentChar == ' ')
-            // {
-            //     i++;
-            //     break;
-            // }
             else
             {
                 char key = currentChar;
