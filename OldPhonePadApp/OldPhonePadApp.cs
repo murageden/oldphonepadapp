@@ -13,12 +13,12 @@ public class OldPhonePadApp
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Enter numbers (0-9) to simulate key press to Old Phone Keypad:");
+        Console.WriteLine("Enter Numbers (0-9) to Simulate Key Press to Old Phone Keypad:");
         string input = Console.ReadLine();
 
         string result = OldPhonePad(input);
 
-        Console.WriteLine("Old phone keypad result: " + result);
+        Console.WriteLine("Old Phone Keypad Result: " + result);
     }
 
     public static string OldPhonePad(string input)
@@ -30,15 +30,15 @@ public class OldPhonePadApp
 
         var phonePad = new Dictionary<char, string> {
             {'1', ",.?!:;@$%&*()"},
-            {'2', "ABC"},
-            {'3', "DEF"},
-            {'4', "GHI"},
-            {'5', "JKL"},
-            {'6', "MNO"},
-            {'7', "PQRS"},
-            {'8', "TUV"},
-            {'9', "WXYZ"},
-            {'0', "0 "}
+            {'2', "ABC2"},
+            {'3', "DEF3"},
+            {'4', "GHI4"},
+            {'5', "JKL5"},
+            {'6', "MNO6"},
+            {'7', "PQRS7"},
+            {'8', "TUV8"},
+            {'9', "WXYZ9"},
+            {'0', " 0"}
         };
 
         var result = new StringBuilder();
@@ -61,11 +61,11 @@ public class OldPhonePadApp
                 }
                 i++;
             }
-            else if (currentChar == ' ')
-            {
-                i++;
-                break;
-            }
+            // else if (currentChar == ' ')
+            // {
+            //     i++;
+            //     break;
+            // }
             else
             {
                 char key = currentChar;

@@ -7,7 +7,7 @@ cd OldPhonePadApp/
 dotnet build
 
 if [ $? -ne 0 ]; then
-    echo $'\n Build failed. Could be errors in the code Exiting script. \n'
+    echo $'\n Build failed. Could be errors in the code. Exiting script. \n'
     exit 1 # Failure
 fi
 
@@ -26,7 +26,7 @@ if [ $? -eq 0 ]; then
     # Add changes to git
     cd ../
     git add .
-    git commit -m "app (Fix New Line Automated Testing): Auto Run Tests and Push Changes"
+    git commit -m "app (#001 Automate Script): Auto Run Tests and Push Changes"
     git push origin main
     echo $'\n Changes pushed successfully. \n'
     exit 0 # Success
