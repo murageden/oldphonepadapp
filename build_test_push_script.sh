@@ -26,7 +26,7 @@ if [ $? -eq 0 ]; then
     # Add changes to git
     cd ../
     git add .
-    git commit -m "app (#001 Initial Commit): Auto Run Tests and Push Changes"
+    git commit -m "app (#001 Initial Commit): Add Link to Chat GPT AI Prompt"
     git push origin main
     echo $'\n Changes pushed successfully. \n'
     exit 0 # Success
